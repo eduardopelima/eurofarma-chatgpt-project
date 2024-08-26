@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "eurofarma-3sit"
+version = "0.1.0"
+description = ""
+authors = ["EDUARDO LIMA <weduardow123@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlalchemy = "^2.0.32"
+python-dotenv = "^1.0.1"
+fastapi = {extras = ["standard"], version = "^0.112.2"}
+psycopg2 = "^2.9.9"
+uvicorn = "^0.30.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+app = "fastapi dev src/app/main.py"
