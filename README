@@ -26,10 +26,25 @@ Este é um projeto Python que utiliza **Streamlit**, **FastAPI** e **Poetry** pa
    poetry install
    poetry shell
 
-4. **Iniciando a API**
+4. **Arquivo de variáveis locais**
+    ```bash
+   touch .env
+    ```
+
+   <p>Dentro do arquivo de variáveis, preencha: <p>
+
+   ```plaintext
+    DATABASE_USERNAME=
+    DATABASE_PASSWORD=
+    DATABASE_HOST=
+    DATABASE_PORT=
+    DATABASE_NAME=
+   ```
+
+5. **Iniciando a API**
     ```bash
     fastapi run api/app/main.py
 
-5. **Iniciando aplicação web**
+6. **Iniciando aplicação web**
     ```bash
     streamlit run frontend/main.py
