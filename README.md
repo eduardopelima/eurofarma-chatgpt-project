@@ -17,29 +17,20 @@ Este é um projeto Python que utiliza **Streamlit**, **FastAPI** e **Poetry** pa
    git clone https://github.com/eduardopelima/eurofarma-chatgpt-project
    cd eurofarma-chatgpt-project
    
-2. **Setar versão correta do Python localmente:**
+2. **Configure a versão correta do Python com pyenv:**
     ```bash
+   pyenv install 3.12.1
    pyenv local 3.12.1
 
-3. **Ativação do ambiente Poetry e download das bibliotecas**
+3. **Ativação do ambiente virtual Poetry e download das dependências do projeto:**
     ```bash
    poetry install
    poetry shell
 
-4. **Arquivo de variáveis locais**
+4. **Baseado no .env-example, crie seu arquivo .env para definir suas variáveis locais:**
     ```bash
    touch .env
     ```
-
-   <p>Dentro do arquivo de variáveis, preencha: <p>
-
-   ```plaintext
-    DATABASE_USERNAME=
-    DATABASE_PASSWORD=
-    DATABASE_HOST=
-    DATABASE_PORT=
-    DATABASE_NAME=
-   ```
 
 5. **Iniciando a API**
     ```bash
@@ -48,3 +39,5 @@ Este é um projeto Python que utiliza **Streamlit**, **FastAPI** e **Poetry** pa
 6. **Iniciando aplicação web**
     ```bash
     streamlit run frontend/main.py
+
+7. *Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>*
