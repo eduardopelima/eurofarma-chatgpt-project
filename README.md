@@ -28,7 +28,8 @@
    poetry shell
 
 4. **Criando seu arquivo .env**
-    ***Baseado no arquivo na pasta raiz do projeto ".env-example", crie seu arquivo .env. Caso você já tenha uma instância PostgreSQL, altere para suas variáveis:***
+    <p>Baseado no arquivo na pasta raiz do projeto ".env-example", crie seu próprio arquivo na pasta raiz chamado ".env". Caso você já tenha uma instância PostgreSQL, altere para suas variáveis:</p>
+
     ```bash
    touch .env
 
