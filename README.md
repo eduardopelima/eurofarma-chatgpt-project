@@ -43,4 +43,4 @@
     ```bash
     streamlit run frontend/main.py
 
-8. *Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>*
+8. **Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>**
