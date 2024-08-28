@@ -1,5 +1,7 @@
 # Projeto Eurofarma
 
+<img alt="data pipeline" src="./resources/challenge3sit.drawio.png">
+
 ## Tecnologias Utilizadas
 
 - **Python 3.12.1**: Versão do Python utilizada para o desenvolvimento do projeto.
