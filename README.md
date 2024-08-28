@@ -1,6 +1,4 @@
-# Meu Projeto Python
-
-Este é um projeto Python que utiliza **Streamlit**, **FastAPI** e **Poetry** para criar uma aplicação web e uma API. O projeto está configurado para usar a versão **Python 3.12.1** localmente.
+# Projeto Eurofarma
 
 ## Tecnologias Utilizadas
 
@@ -8,6 +6,8 @@ Este é um projeto Python que utiliza **Streamlit**, **FastAPI** e **Poetry** pa
 - **Streamlit**: Framework para criação de aplicações web interativas em Python.
 - **FastAPI**: Framework moderno e rápido para construção de APIs com Python.
 - **Poetry**: Ferramenta de gerenciamento de dependências e empacotamento para projetos Python.
+- **Docker**: Plataforma de containerização utilizada para criar ambientes isolados e consistentes para o desenvolvimento e execução da aplicação.
+- **PostgreSQL**: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar e gerenciar os dados da aplicação.
 
 ## Instalação
 
@@ -27,17 +27,20 @@ Este é um projeto Python que utiliza **Streamlit**, **FastAPI** e **Poetry** pa
    poetry install
    poetry shell
 
-4. **Baseado no .env-example, crie seu arquivo .env para definir suas variáveis locais:**
+4. **Baseado no .env-example, crie seu arquivo .env e altere suas variáveis locais caso necessário:**
     ```bash
    touch .env
-    ```
 
-5. **Iniciando a API**
+5. **Subindo um PostgreSQL localmente:**
+    ```bash
+    docker-compose -f ./database/docker-compose.yaml up -d
+
+x. **Iniciando a API**
     ```bash
     fastapi run api/app/main.py
 
-6. **Iniciando aplicação web**
+x. **Iniciando aplicação web**
     ```bash
     streamlit run frontend/main.py
 
-7. *Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>*
+x. *Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>*
