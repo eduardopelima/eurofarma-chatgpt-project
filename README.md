@@ -27,11 +27,12 @@
    poetry install
    poetry shell
 
-4. **Baseado no .env-example, crie seu arquivo .env e altere suas variáveis locais caso necessário:**
+4. **Criando seu arquivo .env**
+    ***Baseado no arquivo na pasta raiz do projeto ".env-example", crie seu arquivo .env. Caso você já tenha uma instância PostgreSQL, altere para suas variáveis:***
     ```bash
    touch .env
 
-5. **Subindo um PostgreSQL localmente:**
+5. **(opcional, caso já tenha um PostgreSQL configurado) Subindo um PostgreSQL localmente:**
     ```bash
     docker-compose -f ./database/docker-compose.yaml up -d
 
