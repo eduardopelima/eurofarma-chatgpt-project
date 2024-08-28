@@ -35,12 +35,12 @@
     ```bash
     docker-compose -f ./database/docker-compose.yaml up -d
 
-x. **Iniciando a API**
+6. **Iniciando a API**
     ```bash
     fastapi run api/app/main.py
 
-x. **Iniciando aplicação web**
+7. **Iniciando aplicação web**
     ```bash
     streamlit run frontend/main.py
 
-x. *Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>*
+8. *Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>*
