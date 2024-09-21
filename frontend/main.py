@@ -18,7 +18,7 @@ def main():
 
         categoria = st.text_input("Categoria", max_chars=50)
         nome = st.text_input("Nome", max_chars=50)
-        descricao = st.text_input("Descrição", max_chars=50)
+        descricao = st.text_input("Descrição", max_chars=1000)
 
         prosseguir = st.button('Prosseguir')
 

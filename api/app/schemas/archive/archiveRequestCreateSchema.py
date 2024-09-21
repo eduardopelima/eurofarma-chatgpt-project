@@ -1,8 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class ArchiveSchema(BaseModel):
-    id: Optional[int] = None
+class ArchiveRequestCreateSchema(BaseModel):
     categoria: str
     nome: str
     descricao: str
