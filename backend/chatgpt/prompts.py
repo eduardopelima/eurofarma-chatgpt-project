@@ -18,9 +18,25 @@ class PromptFilterFileAndResponse:
         chat_completion = self.client_ai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "You will receive a list of ids and metada about them, and you need to determine only one id that is the best to respond to the prompt question. If any metadata makes sense to the prompt question, return id 0. The return should be only an integer number."},
-                {"role": "user", "content": f"Prompt question: {self.prompt_question}"},
-                {"role": "user", "content": f"Files list: {json.dumps(self.files_list)}"},
+                {
+                    "role": "system", 
+                    "content": (
+                        "You are a support system for a company, handling Portuguese questions from employees. "
+                        "You will receive a list of metadata for files and need to select the file ID that most closely "
+                        "matches the employee's question. Use synonyms and semantic matching to find the best fit. "
+                        "If none of the metadata is relevant, return ID 0. The return should be a single integer "
+                        "corresponding to the best-matching file ID. "
+                        "Example: 'Posso usar chinelo?' should match metadata like 'vestimenta', 'dress code'."
+                    )
+                },
+                {
+                    "role": "user", 
+                    "content": f"Prompt question: {self.prompt_question}"
+                },
+                {
+                    "role": "user", 
+                    "content": f"Files list (metadata): {json.dumps(self.files_list)}"
+                }
             ]
         )
 
