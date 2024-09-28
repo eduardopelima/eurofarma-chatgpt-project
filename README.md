@@ -20,11 +20,11 @@
    cd eurofarma-chatgpt-project
 
 4. **Criando seu arquivo .env**
-    <p>Baseado no arquivo ".env-example" presente nas pastas backend e database, crie seus respectivos arquivos ".env" em cada um.</p>
+    <p>Baseando-se nos arquivos ".env-example" presentes na pasta raiz e "backend", crie seus respectivos arquivos ".env" em cada um.</p>
 
     ```bash
    touch backend/.env
-   touch database/.env
+   touch .env
 
 2. **Execute o arquivo docker-compose para subir todos os módulos da aplicação:**
     ```bash

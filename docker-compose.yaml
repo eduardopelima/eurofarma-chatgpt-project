@@ -27,7 +27,7 @@ services:
     volumes:
       - ./database/init_database.sql:/docker-entrypoint-initdb.d/init_database.sql
     env_file:
-      - database/.env
+      - .env
     environment:
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
