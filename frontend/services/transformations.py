@@ -1,6 +1,5 @@
 from io import StringIO
 import PyPDF2
-import streamlit as st
 
 def extract_text_from_files(uploaded_file):
 
