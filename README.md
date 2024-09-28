@@ -18,33 +18,15 @@
    ```bash
    git clone https://github.com/eduardopelima/eurofarma-chatgpt-project
    cd eurofarma-chatgpt-project
-   
-2. **Configure a versão correta do Python com pyenv:**
-    ```bash
-   pyenv install 3.12.1
-   pyenv local 3.12.1
-
-3. **Ativação do ambiente virtual Poetry e download das dependências do projeto:**
-    ```bash
-   poetry install
-   poetry shell
 
 4. **Criando seu arquivo .env**
-    <p>Baseado no arquivo na pasta raiz do projeto ".env-example", crie seu próprio arquivo na pasta raiz chamado ".env". Caso você já tenha uma instância PostgreSQL, altere para suas variáveis:</p>
+    <p>Baseado no arquivo ".env-example" presente em cada módulo de nossa aplicação (backend, database e frontend), crie seu próprio arquivo em cada módulo entitulado ".env".</p>
 
     ```bash
-   touch .env
+   touch backend/.env
 
-5. **(opcional, caso já tenha um PostgreSQL configurado) Subindo um PostgreSQL localmente:**
+2. **Execute o arquivo docker-compose para subir todos os módulos da aplicação:**
     ```bash
-    docker-compose -f ./database/docker-compose.yaml up -d
-
-6. **Iniciando a API**
-    ```bash
-    fastapi run api/app/main.py
-
-7. **Iniciando aplicação web**
-    ```bash
-    streamlit run frontend/main.py
+   docker-compose up
 
 8. **Acesse a aplicação web na sua rede local, pelo link: <a href="http://localhost:8501/">http://localhost:8501/<a>**

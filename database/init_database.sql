@@ -1,5 +1,3 @@
-CREATE DATABASE eurofarma;
-
 \c eurofarma;
 
 CREATE TABLE archives (

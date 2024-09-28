@@ -31,7 +31,7 @@ def upload_file_area():
             }
         
             try:
-                response = requests.post("http://127.0.0.1:8000/add/archive", json=archive_data)
+                response = requests.post("http://backend:8080/add/archive", json=archive_data)
                 
                 if response.status_code == 200:
                     st.success("Arquivo adicionado com sucesso!")
@@ -49,7 +49,7 @@ def prompt_area():
     if st.button("Enviar Prompt"):
         
         try:
-            response = requests.post("http://127.0.0.1:8000/get/prompt_response", params={"question": user_input})
+            response = requests.post("http://backend:8080/get/prompt_response", params={"question": user_input})
             response_from_api = (response.content).decode('utf-8')
             
             if response.status_code == 200:

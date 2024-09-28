@@ -41,6 +41,7 @@ def add_archive(archive: ArchiveRequestCreateSchema, db: Session = Depends(get_d
 
 @router.post("/get/prompt_response")
 def prompt_response(question: str, db: Session = Depends(get_db)):
+
     archives : List[ArchiveMetadataResponseSchema] = list_archives_metadata_only(db)
     archives = "[" + ", ".join([archive.model_dump_json() for archive in archives]) + "]"
 
