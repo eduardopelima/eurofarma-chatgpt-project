@@ -1,5 +1,6 @@
 from .get_client import OpenAIClient
 import json
+import re
 
 class PromptFilterFileAndResponse:
 
@@ -42,7 +43,7 @@ class PromptFilterFileAndResponse:
 
         response_content = chat_completion.choices[0].message.content
         
-        self.selected_file_id = int(response_content)
+        self.selected_file_id = int(re.findall("\d+",response_content)[0])
  
     def set_selected_file_content(self, file_content):
 
